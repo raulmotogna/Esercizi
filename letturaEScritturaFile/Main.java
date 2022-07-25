@@ -15,14 +15,26 @@ import java.util.List;
 
 public class Main {
 	
+	static List<Vettura> listaVetture = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		
+		for(String s : proprietario) {
+			EnumMarca marca = marca.randomMarcaa();
+			String targa = targa.randomTarga();
+			Vettura vettura = new Vettura(marca, targa, s);
+			}
+		
+		
+		
+	}
 	
 	
-	List<Vettura> listaVetture = new ArrayList<>();
+
+	
 	
 	// .split(|) Metodo per inserire il separatore. Sostituire la virgola tra una lista e l'altra con |
 	
-	
-
-	
 
 }
+

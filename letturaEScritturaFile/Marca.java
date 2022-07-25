@@ -1,16 +1,16 @@
 package letturaEScritturaFile;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /*
- * - La marca deve essere presa, randomicamente da un enum FIAT, ALFA_ROMEO, TOYOTA, FERRARI, FORD, BMW.
+ * - La marca deve essere presa, randomicamente da un enum FIAT, ALFA_ROMEO, TOYOTA, FERRARI, FORD, BMW. -->FATTO DENTRO L'ENUM
  */
 
 public class Marca {
 
 	private EnumMarca marca;
-
-	private Random randomMarca = new Random();
 	
 	//COSTRUTTORE
 	public Marca(EnumMarca marca) {
@@ -18,14 +18,8 @@ public class Marca {
 	}
 	
 	//METODI
-	public void mostraMarca() {
-		
-	}
-	
-	
-	
-	
-	
+
+
 	
 	
 	//GET/SET marca
@@ -37,14 +31,6 @@ public class Marca {
 		this.marca = marca;
 	}
 	
-	//GET/SET randomMarca
-	public Random getRandomMarca() {
-		return this.randomMarca;
-	}
-
-	public void setRandomMarca(Random randomMarca) {
-		this.randomMarca = randomMarca;
-	}
 	
 	@Override
 	public String toString() {

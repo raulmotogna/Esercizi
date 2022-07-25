@@ -44,7 +44,6 @@ public class NomeProprietario {
 			"Gica Hagi" //30
 			};
 	
-	private Random randomProprietario = new Random();
 	
 	//COSTRUTTORE
 	public NomeProprietario() {
@@ -52,10 +51,7 @@ public class NomeProprietario {
 	}
 	
 	//METODI
-	
-	
-	
-	
+
 	
 	
 	
@@ -66,15 +62,7 @@ public class NomeProprietario {
 	public static String [] getProprietario() {
 		return proprietario;
 	}
-
-	//GET/SET randomProprietario
-	public Random getRandomProprietario() {
-		return this.randomProprietario;
-	}
-
-	public void setRandomProprietario(Random randomProprietario) {
-		this.randomProprietario = randomProprietario;
-	}
+	
 	
 	@Override
 	public String toString() {

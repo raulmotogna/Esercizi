@@ -1,5 +1,7 @@
 package letturaEScritturaFile;
 
+import java.util.Random;
+
 public enum EnumMarca {
 
 	FIAT,
@@ -8,4 +10,15 @@ public enum EnumMarca {
 	FERRARI,
 	FORD,
 	BMW;
+	
+	
+	public EnumMarca randomMarcaa() {
+	    int rand = new Random().nextInt(EnumMarca.values().length);
+	    return EnumMarca.values()[rand];
+	}
+	
+//	public static void main(String[] args) {
+//		System.out.println(randomMarcaa());
+//	}
+	
 }
