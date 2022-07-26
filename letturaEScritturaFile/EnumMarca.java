@@ -12,13 +12,10 @@ public enum EnumMarca {
 	BMW;
 	
 	
-	public EnumMarca randomMarcaa() {
-	    int rand = new Random().nextInt(EnumMarca.values().length);
-	    return EnumMarca.values()[rand];
+	public static EnumMarca randomMarcaa() {
+	    int marca = new Random().nextInt(EnumMarca.values().length);
+	    return EnumMarca.values()[marca];
 	}
 	
-//	public static void main(String[] args) {
-//		System.out.println(randomMarcaa());
-//	}
-	
+	//Non serve piu, ma visto che prima parlando sembrava che questo andava bene, non l'ho cancellato per ora.
 }

@@ -1,7 +1,5 @@
 package letturaEScritturaFile;
 
-import java.util.List;
-import java.util.Random;
 
 /*
  * - creare vetture in modo randomico.
@@ -21,19 +19,7 @@ public class Vettura {
 	}
 	
 	//METODI 
-	public void nuovaVettura() {
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 
 	//GET/SET marca
 	public EnumMarca getMarca() {
