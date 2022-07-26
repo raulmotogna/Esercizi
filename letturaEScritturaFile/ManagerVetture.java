@@ -1,5 +1,10 @@
 package letturaEScritturaFile;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class ManagerVetture {
@@ -70,13 +75,72 @@ public class ManagerVetture {
 		return vettura;
 	}
 	
+	//Creazione file
+	public static boolean nuovoFile() {
+	    String path = "C:\\Users\\Motogna\\eclipse-workspace\\letturaEScritturaFile\\src\\vetture.txt";
+	    try {
+	        File vetture = new File(path);
+	        if (vetture.exists())
+	            System.out.println("Il file " + path + " esiste");
+	        else if (vetture.createNewFile())
+	            System.out.println("Il file " + path + " è stato creato");
+	        else
+	            System.out.println("Il file " + path + " non può essere creato");
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+		return false;
+	}
 	
-	public static void main(String[] args) {
-		System.out.println(creaVettura());
+	//Scrittura su file
+	public static boolean scriviFile() {
+	    String path = "C:\\Users\\Motogna\\eclipse-workspace\\letturaEScritturaFile\\src\\vetture.txt";
+	    try {
+	        File vetture = new File(path);
+	        FileWriter fileScritto = new FileWriter(vetture);
+	        for(int i=0; i <31; i++) {
+	        	fileScritto.write("" +EnumMarca.randomMarcaa()+ "\t" + "|" + "\t" +randomTarga()+ "\t" + "|" + "\t" +randomProprietario()+"\n");
+	        }
+	        fileScritto.flush();
+	        fileScritto.close();
+	    }
+	    catch(IOException e) {
+	        e.printStackTrace();
+	    }
+		return false;
 	}
 	
 	
 	
+	
+	
+	
+	//Creato per fare una prova sull'eccezione creata
+	
+//	static List<Vettura> listaVetture = new ArrayList<>();
+//	
+//	public static void aggiungiVettura() throws VehicleDuplicationException {
+//		try {
+//			listaVetture.add(creaVettura());
+//		    if(listaVetture.contains(proprietario)) {
+//			    throw new VehicleDuplicationException();
+//			}
+//		} 
+//		catch(VehicleDuplicationException vdex) {
+//			System.out.println("Stringa gia presente");
+//		}
+//	}
+	
+
+	public static void main(String[] args) {
+		System.out.println(scriviFile());
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "" +EnumMarca.randomMarcaa()+ "\t" + "|" + "\t" +randomTarga()+ "\t" + "|" + "\t" +randomProprietario()+"";
+	}
 	
 	
 }

@@ -1,9 +1,5 @@
 package letturaEScritturaFile;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 /*
  * - creare 30 vetture, ogni proprietario possiede una sola vettura.
  * - creare il file con la struttura prevista.
@@ -16,38 +12,24 @@ import java.util.List;
 
 public class Main {
 	
-	//static List<Vettura> listaVetture = new ArrayList<>();
-	
-	public static void main(String[] args) {
-		
-
-		
-		
-		
-	}
-	
-	
-	//Creazione nuovo file e scrittura 
-//	public static void newFile() {
-//	    String path = "C:\\Users\\Motogna\\eclipse-workspace\\letturaEScritturaFile\\src\\vetture.txt";
-//	    try {
-//	        File vetture= new File(path);
-//	        vetture.createNewFile();
-//	        FileWriter fileScrittura = new FileWriter(vetture);
-//	        fileScrittura.write("Questo è il nostro primo file");
-//	        fileScrittura.flush();
-//	        fileScrittura.close();
-//	    }
-//	    catch(IOException e) {
-//	        e.printStackTrace();
-//	    }
-//	}
 	
 	
 
 	
 	
 	// .split(|) Metodo per inserire il separatore. Sostituire la virgola tra una lista e l'altra con |
+	
+	
+
+	
+	
+
+	
+	
+
+		  
+
+	
 	
 
 }

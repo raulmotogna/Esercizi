@@ -17,5 +17,4 @@ public enum EnumMarca {
 	    return EnumMarca.values()[marca];
 	}
 	
-	//Non serve piu, ma visto che prima parlando sembrava che questo andava bene, non l'ho cancellato per ora.
 }

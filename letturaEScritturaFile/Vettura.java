@@ -1,6 +1,5 @@
 package letturaEScritturaFile;
 
-
 /*
  * - creare vetture in modo randomico.
  */
