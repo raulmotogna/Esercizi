@@ -30,10 +30,10 @@ public class Main {
 		
 		Sim chiamante;
 		Sim chiamato;
+		Sim numeroStampa;
 		
-		//aggiungerei un'altro case per la stampa della sim(input utente) con i dati relativi alla sim e la lista delle telefonate
-		while (!"1".equals(scrivi)) {
-			System.out.println("Scrivi : \n0 Inserisci una nuova telefonata \n1 esci");
+		while (!"3".equals(scrivi)) {
+			System.out.println("Scrivi : \n0 Inserisci una nuova telefonata \n1 Stampa dati Sim \n2 Vedi telefonate verso un numero selezionato \n3 esci");
 			scrivi = tellScanner.nextLine();
 			switch(scrivi) {
 			
@@ -53,6 +53,7 @@ public class Main {
 				//fai partire il timer
 				Telefonata telefonataCorrente = startCall(chiamante, chiamato);
 				scrivi = tellScanner.nextLine();
+				
 
 				
 				System.out.println("Attacca telefonata");
@@ -61,14 +62,34 @@ public class Main {
 				
 				listaTelefonate.add(telefonataCorrente);
 				scrivi = tellScanner.nextLine();
+				
+				System.out.println(listaTelefonate);
 
 				
 				tellScanner.nextLine();
 				break;	
-//			case "2":
-//				System.out.println("Seleziona Sim : ");
-//				printNumbers(listaSim);
 				
+			case "2":
+				System.out.println("Inserisci chiamato : ");
+				printNumbers(listaSim);
+				input = tellScanner.nextInt();
+				chiamato = listaSim.get(input);
+				//stampare la lista delle telefonate verso questo numero
+				
+				tellScanner.nextLine();
+				break;	
+				
+			case "3":
+				System.out.println("Seleziona Sim : ");
+				printNumbers(listaSim);
+				input = tellScanner.nextInt();
+				numeroStampa = listaSim.get(input);
+				//Stampare Sim
+				
+				scrivi = tellScanner.nextLine();
+				
+				tellScanner.nextLine();
+				break;
 			}
 		}
 		tellScanner.close();

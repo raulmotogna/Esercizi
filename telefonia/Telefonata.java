@@ -74,6 +74,11 @@ public class Telefonata {
 	public void setFineChiamata(Date fineChiamata) {
 		this.fineChiamata = fineChiamata;
 	}
+	
+	@Override
+	public String toString() {
+		return "" +numeroChiamante+ "\n" +numeroChiamato+ "\n" +inizioChiamata+ "\n" +fineChiamata;
+	}
 
 
 	
