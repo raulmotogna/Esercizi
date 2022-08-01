@@ -34,50 +34,48 @@ public class Telefonata {
 	public void numberCallsToNumber() {
 		
 	}
-
-	
-
-	
-
 	
 	
-	
-	
-	
-	
-
-
 	//GET/SET numeroChiamante
-	public String getNumeroChiamante() {
+	public Sim getNumeroChiamante() {
 		return numeroChiamante;
 	}
 
-	public void setNumeroChiamante(String numeroChiamante) {
+	public void setNumeroChiamante(Sim numeroChiamante) {
 		this.numeroChiamante = numeroChiamante;
 	}
 
 
 	//GET/SET numeroChiamato
-	public String getNumeroChiamato() {
+	public Sim getNumeroChiamato() {
 		return numeroChiamato;
 	}
 
-	public void setNumeroChiamato(String numeroChiamato) {
+	public void setNumeroChiamato(Sim numeroChiamato) {
 		this.numeroChiamato = numeroChiamato;
 	}
 
-	//GET/SET durataTelefonata
-	public double getDurataTelefonata() {
-		return this.durataTelefonata;
-	}
-	
-	public void setDurataTelefonata(double durataTelefonata) {
-		this.durataTelefonata = durataTelefonata;
+
+	//GET/SET inizioChiamata
+	public Date getInizioChiamata() {
+		return inizioChiamata;
 	}
 
+	public void setInizioChiamata(Date inizioChiamata) {
+		this.inizioChiamata = inizioChiamata;
+	}
 
 
-	
+	//GET/SET fineChiamata
+	public Date getFineChiamata() {
+		return fineChiamata;
+	}
+
+	public void setFineChiamata(Date fineChiamata) {
+		this.fineChiamata = fineChiamata;
+	}
+
+
 	
 
 }

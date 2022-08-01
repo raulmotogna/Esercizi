@@ -10,9 +10,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Sim sim1 = new Sim("3265875163", 15.9, new ArrayList<Telefonata>());
-		Sim sim2 = new Sim("3265875163", 15.9, new ArrayList<Telefonata>());
-		Sim sim3 = new Sim("3265875163", 15.9, new ArrayList<Telefonata>());
-		Sim sim4 = new Sim("3265875163", 15.9, new ArrayList<Telefonata>());
+		Sim sim2 = new Sim("3862019374", 19.2, new ArrayList<Telefonata>());
+		Sim sim3 = new Sim("3756297584", 10.5, new ArrayList<Telefonata>());
+		Sim sim4 = new Sim("3756283028", 5.1, new ArrayList<Telefonata>());
 		
 		
 		List<Sim> listaSim = new ArrayList<>();
@@ -31,13 +31,13 @@ public class Main {
 		Sim chiamante;
 		Sim chiamato;
 		
+		//aggiungerei un'altro case per la stampa della sim(input utente) con i dati relativi alla sim e la lista delle telefonate
 		while (!"1".equals(scrivi)) {
 			System.out.println("Scrivi : \n0 Inserisci una nuova telefonata \n1 esci");
 			scrivi = tellScanner.nextLine();
 			switch(scrivi) {
 			
 			case "0":
-				System.out.println();
 				System.out.println("Seleziona chiamante : ");
 				printNumbers(listaSim);
 				int input = tellScanner.nextInt();
@@ -52,23 +52,23 @@ public class Main {
 				System.out.println("Chiama");
 				//fai partire il timer
 				Telefonata telefonataCorrente = startCall(chiamante, chiamato);
+				scrivi = tellScanner.nextLine();
+
 				
 				System.out.println("Attacca telefonata");
 				//ferma il timer
-				stopTelefonata(telefonataCorrente);
+				stopCall(chiamante, chiamato, telefonataCorrente);
 				
+				listaTelefonate.add(telefonataCorrente);
+				scrivi = tellScanner.nextLine();
+
 				
-				//long tempoTrascorso = new Date().getTime() - new Date().getTime();
-				
-				//chiama metodo timerChiamata --> durataChiamata(fine timer - inizio timer)>>return durataChiamata
-				
-//				Telefonata telefonata = new Telefonata(numeroChiamante, numeroChiamato, //durataChiamata);
-//				
-//				listaTelefonate.add(telefonata);
-				
-				//System.out.println("Telefonata: "+ "Numero chiamante : "+numeroChiamante+"\n"+"Numero chiamato : "+numeroChiamato+"\n"+"Durata Telefonata : " + durataChiamata+"");
 				tellScanner.nextLine();
-				break;		
+				break;	
+//			case "2":
+//				System.out.println("Seleziona Sim : ");
+//				printNumbers(listaSim);
+				
 			}
 		}
 		tellScanner.close();
@@ -90,13 +90,13 @@ public class Main {
 	}
 	
 	public static void stopCall(Sim chiamante, Sim chiamato, Telefonata telefonata) {
-		telefonata.setFineTelefonata(new Date());
+		telefonata.setFineChiamata(new Date());
 		chiamante.getListaTelefonate().add(telefonata);
 		chiamato.getListaTelefonate().add(telefonata);
 	}
 	
 	public static void CallDuration() {
-		
+		//long tempoTrascorso = new Date().getTime() - new Date().getTime();
 	}
 	
 }

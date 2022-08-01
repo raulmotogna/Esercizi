@@ -15,7 +15,7 @@ public class Sim {
 	public Sim(String numeroTelefono, double credito, List<Telefonata> listaTelefonate) {
 		this.numeroTelefono = numeroTelefono;
 		this.credito = credito;
-		this.listaTelefonate = listaTelefonate;
+		this.listaTelefonate = listaTelefonate; //--> sia ricevute che efettuate(inizio chiamata, fine chiamata, durata chiamata)
 	}
 	
 	
@@ -25,7 +25,7 @@ public class Sim {
 	
 	//
 	public void PrintSimAndCallList() {
-		
+		//ciclo for sulla lista delle sim, stampare sim e lista chiamate di quella sim
 	}
 	
 	
